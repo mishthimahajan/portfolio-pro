@@ -1,24 +1,184 @@
+// import emailjs from "emailjs-com"
+
+// export default function Contact(){
+
+// function send(e){
+
+// e.preventDefault()
+
+// emailjs.sendForm(
+
+// "SERVICE_ID",
+
+// "TEMPLATE_ID",
+
+// e.target,
+
+// "PUBLIC_KEY"
+
+// )
+
+// alert("Message Sent")
+
+// }
+
+// return(
+
+// <section
+
+// id="contact"
+
+// className="py-24 px-10">
+
+// <h1 className="
+
+// text-5xl
+
+// text-center
+
+// mb-12">
+
+// Contact
+
+// </h1>
+
+// <form
+
+// onSubmit={send}
+
+// className="
+
+// max-w-xl
+
+// mx-auto
+
+// flex
+
+// flex-col
+
+// gap-5">
+
+// <input
+
+// name="name"
+
+// placeholder="Name"
+
+// className="
+
+// p-4
+
+// rounded-xl
+
+// text-white"
+
+// />
+
+// <input
+
+// name="email"
+
+// placeholder="Email"
+
+// className="
+
+// p-4
+
+// rounded-xl
+
+// text-white"
+
+// />
+
+// <textarea
+
+// name="message"
+
+// placeholder="Message"
+
+// className="
+
+// p-4
+
+// rounded-xl
+
+// text-white"
+
+// />
+
+// <button
+
+// className="
+
+// bg-cyan-500
+
+// p-4
+
+// rounded-xl">
+
+// Send
+
+// </button>
+
+// </form>
+
+// </section>
+
+// )
+
+// }
+
+
+import { useState } from "react"
 import emailjs from "emailjs-com"
 
 export default function Contact(){
+
+const [loading,setLoading]=
+useState(false)
+
+const [success,setSuccess]=
+useState("")
 
 function send(e){
 
 e.preventDefault()
 
+setLoading(true)
+
 emailjs.sendForm(
 
-"SERVICE_ID",
+"service_768tsud",
 
-"TEMPLATE_ID",
+"template_832gmyt",
 
 e.target,
 
-"PUBLIC_KEY"
+"GmRCVmrYzwQALUffT"
 
 )
 
-alert("Message Sent")
+.then(()=>{
+
+setSuccess(
+"Message Sent Successfully ✅"
+)
+
+e.target.reset()
+
+setLoading(false)
+
+})
+
+.catch(()=>{
+
+setSuccess(
+"Failed to send message ❌"
+)
+
+setLoading(false)
+
+})
 
 }
 
@@ -28,19 +188,140 @@ return(
 
 id="contact"
 
-className="py-24 px-10">
+className="
+
+min-h-screen
+
+py-20
+
+px-6
+md:px-10"
+
+>
 
 <h1 className="
 
-text-5xl
+text-4xl
+md:text-5xl
+
+font-bold
 
 text-center
 
-mb-12">
+mb-16">
 
-Contact
+Contact Me
 
 </h1>
+
+<div className="
+
+grid
+
+grid-cols-1
+lg:grid-cols-2
+
+gap-12
+
+items-center">
+
+<div className="space-y-8">
+
+<div className="
+
+bg-gray-900
+
+p-6
+
+rounded-2xl">
+
+<h2 className="
+
+text-xl
+
+font-bold">
+
+📧 Email
+
+</h2>
+
+<p className="mt-2">
+
+mishthimahajan0@gmail.com
+
+</p>
+
+</div>
+
+<div className="
+
+bg-gray-900
+
+p-6
+
+rounded-2xl">
+
+<h2 className="
+
+text-xl
+
+font-bold">
+
+💻 GitHub
+
+</h2>
+
+<a
+
+href="https://github.com/mishthimahajan"
+
+target="_blank"
+
+rel="noreferrer"
+
+className="text-cyan-400">
+
+GitHub Profile
+
+</a>
+
+</div>
+
+<div className="
+
+bg-gray-900
+
+p-6
+
+rounded-2xl">
+
+<h2 className="
+
+text-xl
+
+font-bold">
+
+🔗 LinkedIn
+
+</h2>
+
+<a
+
+href="https://linkedin.com/in/MishthiMahajan"
+
+target="_blank"
+
+rel="noreferrer"
+
+className="text-cyan-400">
+
+LinkedIn Profile
+
+</a>
+
+</div>
+
+</div>
 
 <form
 
@@ -48,9 +329,13 @@ onSubmit={send}
 
 className="
 
-max-w-xl
+bg-gray-900
 
-mx-auto
+p-8
+
+rounded-3xl
+
+shadow-xl
 
 flex
 
@@ -62,7 +347,9 @@ gap-5">
 
 name="name"
 
-placeholder="Name"
+required
+
+placeholder="Your Name"
 
 className="
 
@@ -70,7 +357,9 @@ p-4
 
 rounded-xl
 
-text-white"
+bg-gray-800
+
+outline-none"
 
 />
 
@@ -78,7 +367,11 @@ text-white"
 
 name="email"
 
-placeholder="Email"
+required
+
+type="email"
+
+placeholder="Your Email"
 
 className="
 
@@ -86,7 +379,9 @@ p-4
 
 rounded-xl
 
-text-white"
+bg-gray-800
+
+outline-none"
 
 />
 
@@ -94,7 +389,11 @@ text-white"
 
 name="message"
 
-placeholder="Message"
+required
+
+rows="5"
+
+placeholder="Your Message"
 
 className="
 
@@ -102,11 +401,15 @@ p-4
 
 rounded-xl
 
-text-white"
+bg-gray-800
+
+outline-none"
 
 />
 
 <button
+
+disabled={loading}
 
 className="
 
@@ -114,13 +417,41 @@ bg-cyan-500
 
 p-4
 
-rounded-xl">
+rounded-xl
 
-Send
+hover:bg-cyan-600
+
+duration-300"
+
+>
+
+{
+
+loading?
+
+"Sending...":
+
+"Send Message"
+
+}
 
 </button>
 
+{
+
+success &&
+
+<p className="text-center">
+
+{success}
+
+</p>
+
+}
+
 </form>
+
+</div>
 
 </section>
 

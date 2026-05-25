@@ -37,15 +37,32 @@ setDark(!dark)
 
 }
 
+
 className="
 
 fixed
 
-top-5
+top-6
 
-right-5
+right-6
 
-z-50">
+md:right-8
+
+z-50
+
+bg-slate-900/80
+
+backdrop-blur-lg
+
+p-3
+
+rounded-full
+
+border
+
+border-cyan-500
+
+shadow-lg">
 
 {
 

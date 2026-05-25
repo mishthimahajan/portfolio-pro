@@ -18,7 +18,7 @@ desc:
 
 live:
 
-"autopm-ai-five.vercel.app/",
+"https://autopm-ai-five.vercel.app/",
 
 github:
 
@@ -40,13 +40,14 @@ desc:
 
 live:
 
-"food-link-five.vercel.app",
+"https://food-link-five.vercel.app",
 
 github:
 
 "https://github.com/mishthimahajan/FoodLink"
 
 },
+
 {
 
 name:"Skill Exchange Platform",
@@ -61,7 +62,7 @@ desc:
 
 live:
 
-"skill-exchange-lac.vercel.app/",
+"https://skill-exchange-lac.vercel.app/",
 
 github:
 
@@ -71,7 +72,7 @@ github:
 
 ]
 
-const[filter,setFilter]=
+const [filter,setFilter]=
 useState("All")
 
 return(
@@ -86,13 +87,17 @@ min-h-screen
 
 py-20
 
-px-10"
+px-6
+md:px-10"
 
 >
 
 <h1 className="
 
-text-5xl
+text-4xl
+md:text-5xl
+
+font-bold
 
 text-center
 
@@ -105,6 +110,8 @@ Projects
 <div className="
 
 flex
+
+flex-wrap
 
 justify-center
 
@@ -124,7 +131,11 @@ px-5
 
 py-2
 
-rounded-xl"
+rounded-xl
+
+hover:scale-105
+
+duration-300"
 
 >
 
@@ -144,7 +155,11 @@ px-5
 
 py-2
 
-rounded-xl"
+rounded-xl
+
+hover:scale-105
+
+duration-300"
 
 >
 
@@ -164,7 +179,11 @@ px-5
 
 py-2
 
-rounded-xl"
+rounded-xl
+
+hover:scale-105
+
+duration-300"
 
 >
 
@@ -178,7 +197,11 @@ MERN
 
 grid
 
+grid-cols-1
+
 md:grid-cols-2
+
+lg:grid-cols-3
 
 gap-10"
 
@@ -234,7 +257,8 @@ className="
 
 w-full
 
-h-72
+h-56
+md:h-72
 
 object-cover"
 
@@ -244,7 +268,8 @@ object-cover"
 
 <h2 className="
 
-text-3xl
+text-2xl
+md:text-3xl
 
 font-bold">
 
@@ -266,7 +291,10 @@ text-gray-300">
 
 flex
 
-gap-5
+flex-col
+sm:flex-row
+
+gap-4
 
 mt-6">
 
@@ -276,6 +304,8 @@ href={project.live}
 
 target="_blank"
 
+rel="noopener noreferrer"
+
 className="
 
 bg-cyan-500
@@ -284,7 +314,9 @@ px-5
 
 py-3
 
-rounded-xl"
+rounded-xl
+
+text-center"
 
 >
 
@@ -298,6 +330,8 @@ href={project.github}
 
 target="_blank"
 
+rel="noopener noreferrer"
+
 className="
 
 border
@@ -308,7 +342,9 @@ px-5
 
 py-3
 
-rounded-xl"
+rounded-xl
+
+text-center"
 
 >
 
