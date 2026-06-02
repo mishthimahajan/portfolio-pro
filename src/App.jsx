@@ -10,6 +10,12 @@ import ThemeToggle from
 "./components/ThemeToggle"
 import Footer from
 "./components/Footer"
+import SocialBar
+ from "./components/Socialbar"
+ import Stats from "./components/Stats"
+ import Timeline from "./components/Timeline"
+ import Achievements from "./components/Achievements"
+ import About from "./components/About"
 function App(){
 
 return(
@@ -32,6 +38,11 @@ return(
 <Contact/>
 <ThemeToggle/>
 <Footer/>
+<Achievements/>
+<SocialBar/>
+<Stats/>
+<Timeline/>
+<About/>
 
 </div>
 
