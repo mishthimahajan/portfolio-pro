@@ -1,81 +1,49 @@
-import {useState,useEffect}
-from "react"
+import { useState, useEffect } from "react";
 
-export default function ThemeToggle(){
+export default function ThemeToggle() {
 
-const[dark,setDark]=
-useState(true)
+  const [dark, setDark] = useState(true);
 
-useEffect(()=>{
+  useEffect(() => {
 
-if(dark){
+    if (dark) {
 
-document.body.style.background=
-"#030712"
+      document.body.style.background = "#030712";
+      document.body.style.color = "white";
 
-}
+    } else {
 
-else{
+      document.body.style.background = "#ffffff";
+      document.body.style.color = "#111827";
 
-document.body.style.background=
-"white"
+    }
 
-document.body.style.color=
-"black"
+  }, [dark]);
 
-}
+  return (
 
-},[dark])
+    <button
+      onClick={() => setDark(!dark)}
+      className="
+      p-2
+      w-10
+      h-10
+      flex
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-cyan-400
+      bg-slate-900
+      hover:bg-slate-800
+      hover:scale-110
+      duration-300
+      "
+    >
 
-return(
+      {dark ? "🌙" : "☀️"}
 
-<button
+    </button>
 
-onClick={()=>
-
-setDark(!dark)
-
-}
-
-
-className="
-
-fixed
-
-top-6
-
-right-6
-
-md:right-8
-
-z-50
-
-bg-slate-900/80
-
-backdrop-blur-lg
-
-p-3
-
-rounded-full
-
-border
-
-border-cyan-500
-
-shadow-lg">
-
-{
-
-dark?
-
-"🌙":
-
-"☀️"
-
-}
-
-</button>
-
-)
-
+  );
 }
