@@ -255,6 +255,7 @@
 // }
 
 import { motion } from "framer-motion"
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero(){
 

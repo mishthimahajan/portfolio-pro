@@ -65,4 +65,8 @@ pb-12"
 
 )
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 055f828 (Added portfolio sections and UI improvements)
