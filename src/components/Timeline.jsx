@@ -16,10 +16,9 @@ title:"ET AI Hackathon"
 year:"2025",
 title:"Open Source Contributor"
 },
-
 {
 year:"2025",
-title:"Full Stack Internship - Codec Technologies"
+title:"Full Stack developer intern - codec technologies "
 }
 
 ]
@@ -65,8 +64,4 @@ pb-12"
 
 )
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 055f828 (Added portfolio sections and UI improvements)

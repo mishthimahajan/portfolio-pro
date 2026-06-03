@@ -6,7 +6,7 @@ const stats=[
 
 {
 title:"DSA Problems",
-value:600
+value:500
 },
 
 {
@@ -68,8 +68,4 @@ duration={3}
 
 )
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 055f828 (Added portfolio sections and UI improvements)
