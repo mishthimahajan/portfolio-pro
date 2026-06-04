@@ -40,7 +40,7 @@ return(
 <ThemeToggle/>
 <Footer/>
 <Achievements/>
-<SocialBar/>
+<Socialbar/>
 <Stats/>
 <Timeline/>
 <About/>
