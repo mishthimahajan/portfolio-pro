@@ -16,6 +16,7 @@ import SocialBar
  import Timeline from "./components/Timeline"
  import Achievements from "./components/Achievements"
  import About from "./components/About"
+ import ParticlesBackground from "./components/ParticlesBackground"
 function App(){
 
 return(
@@ -43,6 +44,7 @@ return(
 <Stats/>
 <Timeline/>
 <About/>
+<ParticlesBackground />
 
 </div>
 
