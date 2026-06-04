@@ -17,6 +17,8 @@ import Socialbar
  import Achievements from "./components/Achievements"
  import About from "./components/About"
  import ParticlesBackground from "./components/ParticlesBackground"
+ import ChatBot from "./components/ChatBot"
+ import VisitorCounter from "./components/VisitorCounter"
 function App(){
 
 return(
@@ -45,6 +47,8 @@ return(
 <Timeline/>
 <About/>
 <ParticlesBackground />
+<ChatBot/>
+<VisitorCounter/>
 
 </div>
 
