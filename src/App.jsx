@@ -10,7 +10,7 @@ import ThemeToggle from
 "./components/ThemeToggle"
 import Footer from
 "./components/Footer"
-import SocialBar
+import Socialbar
  from "./components/Socialbar"
  import Stats from "./components/Stats"
  import Timeline from "./components/Timeline"
