@@ -1,40 +1,73 @@
 import {
-FaGithub,
-FaLinkedin,
-FaCode
+  FaGithub,
+  FaLinkedin,
+  FaCode
 } from "react-icons/fa";
 
-export default function SocialBar(){
+export default function Socialbar() {
+  return (
+    <div
+      className="
+      fixed
+      left-4
+      top-1/2
+      -translate-y-1/2
+      flex
+      flex-col
+      gap-4
+      z-50
+      "
+    >
+      <a
+        href="https://api.github.com/users/mishthimahajan"
+        target="_blank"
+        rel="noreferrer"
+        className="
+        bg-gray-800
+        p-3
+        rounded-full
+        hover:scale-125
+        hover:text-cyan-400
+        transition-all
+        duration-300
+        "
+      >
+        <FaGithub size={24} />
+      </a>
 
-return(
+      <a
+        href="https://linkedin.com/in/Mishthi-mahajan"
+        target="_blank"
+        rel="noreferrer"
+        className="
+        bg-gray-800
+        p-3
+        rounded-full
+        hover:scale-125
+        hover:text-cyan-400
+        transition-all
+        duration-300
+        "
+      >
+        <FaLinkedin size={24} />
+      </a>
 
-<div
-className="
-fixed
-left-5
-top-1/2
--translate-y-1/2
-hidden
-lg:flex
-flex-col
-gap-5
-z-50"
->
-
-<a href="https://api.github.com/users/mishthimahajan">
-<FaGithub size={28}/>
-</a>
-
-<a href="https://linkedin.com/in/MishthiMahajan">
-<FaLinkedin size={28}/>
-</a>
-
-<a href="https://leetcode.com/u/Mishthimahajan">
-<FaCode size={28}/>
-</a>
-
-</div>
-
-)
-
+      <a
+        href="https://leetcode.com/u/Mishthimahajan"
+        target="_blank"
+        rel="noreferrer"
+        className="
+        bg-gray-800
+        p-3
+        rounded-full
+        hover:scale-125
+        hover:text-cyan-400
+        transition-all
+        duration-300
+        "
+      >
+        <FaCode size={24} />
+      </a>
+    </div>
+  );
 }

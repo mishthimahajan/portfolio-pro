@@ -25,30 +25,27 @@ return(
 
 <div>
 
-<Navbar/>
+<Navbar />
 
-<Hero/>
+<Hero />
+<About />
+<Skills />
+<Projects />
+<Certificates />
+<Achievements />
+<Stats />
+<Timeline />      {/* Experience */}
+<GithubStats />
+<Leetcode />
 
-<Skills/>
+<Contact />       {/* Keep Contact near the end */}
 
-<Projects/>
+<Footer />
 
-<Certificates/>
-<GithubStats/>
-
-<Leetcode/>
-
-<Contact/>
-<ThemeToggle/>
-<Footer/>
-<Achievements/>
-<Socialbar/>
-<Stats/>
-<Timeline/>
-<About/>
+<Socialbar />
 <ParticlesBackground />
-<ChatBot/>
-<VisitorCounter/>
+<ChatBot />
+<VisitorCounter />
 
 </div>
 
