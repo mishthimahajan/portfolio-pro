@@ -1,73 +1,108 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
-  FaCode
+  FaCode,
+  FaShareAlt,
+  FaTimes,
 } from "react-icons/fa";
 
 export default function Socialbar() {
+  const [open, setOpen] = useState(false);
+
+  const socials = [
+    {
+      icon: <FaGithub size={22} />,
+      link: "https://github.com/mishthimahajan",
+    },
+    {
+      icon: <FaLinkedin size={22} />,
+      link: "https://linkedin.com/in/Mishthi-mahajan",
+    },
+    {
+      icon: <FaCode size={22} />,
+      link: "https://leetcode.com/u/Mishthimahajan",
+    },
+  ];
+
   return (
     <div
       className="
       fixed
-      left-4
-      top-1/2
-      -translate-y-1/2
+      left-6
+      bottom-10
+      z-50
       flex
       flex-col
+      items-center
       gap-4
-      z-50
       "
     >
-      <a
-        href="https://github.com/mishthimahajan"
-        target="_blank"
-        rel="noreferrer"
-        className="
-        bg-gray-800
-        p-3
-        rounded-full
-        hover:scale-125
-        hover:text-cyan-400
-        transition-all
-        duration-300
-        "
-      >
-        <FaGithub size={24} />
-      </a>
+      <AnimatePresence>
+        {open &&
+          socials.map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noreferrer"
+              initial={{
+                opacity: 0,
+                scale: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                scale: 0,
+                y: 20,
+              }}
+              transition={{
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 200,
+              }}
+              className="
+              bg-gray-800
+              p-4
+              rounded-full
+              shadow-lg
+              hover:scale-125
+              hover:text-cyan-400
+              hover:shadow-cyan-500/50
+              transition-all
+              duration-300
+              "
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+      </AnimatePresence>
 
-      <a
-        href="https://linkedin.com/in/Mishthi-mahajan"
-        target="_blank"
-        rel="noreferrer"
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1 }}
+        onClick={() => setOpen(!open)}
         className="
-        bg-gray-800
-        p-3
+        w-16
+        h-16
         rounded-full
-        hover:scale-125
-        hover:text-cyan-400
-        transition-all
-        duration-300
+        bg-cyan-500
+        text-white
+        shadow-lg
+        flex
+        items-center
+        justify-center
+        text-xl
         "
       >
-        <FaLinkedin size={24} />
-      </a>
-
-      <a
-        href="https://leetcode.com/u/Mishthimahajan"
-        target="_blank"
-        rel="noreferrer"
-        className="
-        bg-gray-800
-        p-3
-        rounded-full
-        hover:scale-125
-        hover:text-cyan-400
-        transition-all
-        duration-300
-        "
-      >
-        <FaCode size={24} />
-      </a>
+        {open ? <FaTimes /> : <FaShareAlt />}
+      </motion.button>
     </div>
   );
 }
