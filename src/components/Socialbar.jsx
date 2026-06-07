@@ -19,7 +19,7 @@ export default function Socialbar() {
       "
     >
       <a
-        href="https://api.github.com/users/mishthimahajan"
+        href="https://github.com/mishthimahajan"
         target="_blank"
         rel="noreferrer"
         className="
