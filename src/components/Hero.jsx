@@ -582,20 +582,20 @@ className="
 
 relative
 
-w-72
-md:w-96
+w-60
+md:w-66
 
-rounded-full
+
 
 border-4
 
 border-cyan-400
 
-shadow-2xl"
+shadow-3xl"
 
 />
 
-<div className="
+{/* <div className="
 
 absolute
 
@@ -618,7 +618,7 @@ rounded-2xl
 shadow-xl">
 
 
-</div>
+</div> */}
 
 </div>
 
